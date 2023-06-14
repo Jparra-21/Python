@@ -1,0 +1,40 @@
+i=0
+a=0
+b=1
+suma=0
+sw=1
+while sw == 1:
+    try:
+        numero=int(input("Ingrese un numero entero: "))
+        print("1. Indica si el numero es par o impar.")
+        print("2. Muestra la serie Fibonacci de los 10 numeros")
+        print("3. Salir")
+        op=int(input("Seleccione una opcion: "))
+        if (op > 0 and op < 4):
+            if op == 1:
+                print("ha seleccionado la opcion 1")
+                if numero % 2 != 0:
+                    print("El numero es impar")
+                else:
+                    print("El Numero es par")
+                continu=int(input(" Desea salir 1=Si 2=No : "))
+                if continu==1:
+                    print("Adios")
+                    sw=0
+            if op == 2:
+                print("ha seleccionado la opcion 2")
+                for i in range(10):
+                    print(suma, end=" ")
+                    a=b
+                    b=suma
+                    suma = a + b
+                    i+=1   
+                continu=int(input("\nDesea salir 1=Si 2=No : ")) 
+                if continu==1:
+                    print("adios") 
+                if op == 3:
+                    print("usted desea salir del menu")
+                    sw = 0
+    except:
+        print("Ingreso erroneo ")
+        sw=0
